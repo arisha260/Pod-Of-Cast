@@ -1,0 +1,63 @@
+.supported{
+  padding: 0 10px;
+  padding-bottom: 140px;
+  font-size: 0;
+  background-color: var(--linen);
+  @include mobile{
+    padding-bottom: 70px;
+  }
+  &__container{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid var(--brezent);
+    border-bottom: 1px solid var(--brezent);
+    &::after{
+      content: '';
+      position: absolute;
+      bottom: -220px;
+      left: 50%;
+      width: 150px;
+      height: 150px;
+      background-image: url(../../img/connect.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      z-index: 200;
+      @include mobile{
+        bottom: -120px;
+        width: 100px;
+        height: 100px;
+      }
+    }
+    @include small-tablet{
+      flex-direction: column;
+    }
+  }
+  &__text{
+    margin: 0;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 140%;
+    letter-spacing: -0.02em;
+    color: var(--dark-color);
+    @include tablet{
+      white-space: nowrap;
+    }
+  }
+  &__supports{
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    @include tablet{
+      gap: 10px;
+    }
+    @include mobile{
+      margin: 20px 0;
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
+}

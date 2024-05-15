@@ -1,0 +1,50 @@
+.header__burger{
+  margin-left: auto;
+  display: none;
+  z-index: 10000;
+  @include mobile-burger{
+    position: relative;
+    z-index: 100;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    border: 0;
+    z-index: 100011;
+    span{
+      position: absolute;
+      top: 9px;
+      left: 0;
+      background-color: #000;
+      width: 100%;
+      height: 2px;
+      transition: all 0.5s ease;
+    }
+    &::before, &::after{
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #000;
+      transition: all 0.5s ease;
+    }
+    &::before{
+      top: 0;
+    }
+    &::after{
+      bottom: 0;
+    }
+    &.active-b::before{
+      top: 9px;
+      rotate: -45deg;
+    }
+    &.active-b::after{
+      bottom: 9px;
+      rotate: 45deg;
+    }
+    &.active-b span{
+      display: none;
+    }
+  }
+}

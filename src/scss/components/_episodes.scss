@@ -1,0 +1,157 @@
+.episodes{
+  padding: 140px 0;
+  background-color: var(--linen);
+  @include mobile{
+    padding: 70px 0;
+  }
+  &__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    &::after{
+      content: '';
+      position: absolute;
+      bottom: -220px;
+      left: 50%;
+      width: 150px;
+      height: 150px;
+      background-image: url(../../img/connect1.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      z-index: 200;
+      @include mobile{
+        bottom: -120px;
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+  &__content{
+    position: relative;
+    margin: 100px 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+    &::after{
+      content: '';
+      position: absolute;
+      top: -200px;
+      right: -150px;
+      width: 240px;
+      height: 240px;
+      background-image: url(../../img/bg7.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      @include tablet{
+        background-image: none;
+      }
+    }
+  }
+  &-card{
+    padding: 16px;
+    grid-column: 6 span;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border: 2px solid var(--dark-color);
+    border-radius: 12px;
+    @include small-tablet{
+      grid-column: 12 span;
+    }
+  }
+  &-card__top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    @include small-mobile{
+      flex-direction: column;
+    }
+  }
+  &-card__number{
+    margin: 0;
+    margin-bottom: 4px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--acent-color);
+  }
+  &-card__title{
+    margin: 0;
+    margin-bottom: 15px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 140%;
+    letter-spacing: -0.02em;
+    color: var(--acent-color);
+  }
+  &-card__descr{
+    margin: 0;
+    padding-top: 10px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 160%;
+    color: var(--brezent);
+    border-top: 1px solid var(--brezent);
+  }
+  &-card__image{
+    width: 100%;
+  }
+
+  &-card__bottom{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include small-mobile{
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  &-card__tag{
+    display: flex;
+    gap: 6px;
+    span{
+      border: 1px solid var(--brezent);
+      border-radius: 4px;
+      padding: 6px 12px;
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 160%;
+      color: var(--brezent);
+    }
+  }
+  &-card__images{
+    :not(:last-child){
+      margin-right: -15px;
+    }
+    :last-child{
+      border: 2px solid #fff;
+      border-radius: 100%;
+    }
+  }
+  &-card__hosted{
+    display: flex;
+    align-items: center;
+  }
+
+
+  &__btn{
+    padding: 20px 36px !important;
+  }
+
+}
+.episodes__content .episodes-card:nth-child(2),
+.episodes__content .episodes-card:nth-child(3),
+.episodes__content .episodes-card:nth-child(6) {
+    box-shadow: 10px 10px 0 0 var(--pastel);
+}

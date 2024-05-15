@@ -1,0 +1,7 @@
+.hero-swiper{
+  padding: 120px 0;
+  background-color: var(--linen);
+  @include mobile{
+    padding: 70px 0;
+  }
+}
